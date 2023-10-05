@@ -1,0 +1,28 @@
+﻿Project name: CelestialCandle
+Purpose: Create an unique Candle company’s app using Dot.Net Mvc App (for WEB452 Assingment1)
+Author: Dristi Khondkar
+Date: 2023-10-05 ISO  12:20
+
+AT 12:30 ASP.NET Core 3.1 application is created for the assigned product using Visual Studio 2019
+
+
+Started creating the robust Mvc App for Assingment1. My product was assigned as CANDLE. I will create an unique Candle company product catalogue using  Web Application which will provide Radiance in my customers’ life.
+
+At 12:48
+oh no why showing this build error message!! click the option OK to run the app with the last build and no update was showing.....then from the Error list saw the File name and line where the error was found and it is an extra curly braces } :)
+
+In the HelloWorldController.cs lets try to change the name of the action method ---public IActionResult Index()method name to Radiance() and check if it works
+
+At 13:36
+while trying to change the name of the Index methods name:
+An unhandled exception occurred while processing the request.
+InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Views/Home/Index.cshtml
+/Views/Shared/Index.cshtml
+so change back to Index method
+At 13:50
+Update the _layout.cshtml page with the following:
+Three update done of CelestialGlow to Celestial Glow
+The anchor element <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CelestialGlow</a> to
+<a class="navbar-brand" asp-controller="Home" asp-action="Index">Celestial Glow</a>.
+
