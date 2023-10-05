@@ -13,16 +13,20 @@ oh no why showing this build error message!! click the option OK to run the app 
 
 In the HelloWorldController.cs lets try to change the name of the action method ---public IActionResult Index()method name to Radiance() and check if it works
 
-At 13:36
+At 13:06
 while trying to change the name of the Index methods name:
 An unhandled exception occurred while processing the request.
 InvalidOperationException: The view 'Index' was not found. The following locations were searched:
 /Views/Home/Index.cshtml
 /Views/Shared/Index.cshtml
 so change back to Index method
-At 13:50
+
+At 13:10
+Add controller and update the Welcome and Index methods in the Controllers/HelloWorldController.cs file. 
+Also add the HtmlEncoder.Default.Encode to protect the app from malicious input,
+
 Update the _layout.cshtml page with the following:
-Three update done of CelestialGlow to Celestial Glow
-The anchor element <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CelestialGlow</a> to
-<a class="navbar-brand" asp-controller="Home" asp-action="Index">Celestial Glow</a>.
+Three update done of CelestialCandle to Celestial Candle
+The anchor element <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CelestialCandle</a> to
+<a class="navbar-brand" asp-controller="Home" asp-action="Index">Celestial Candle</a>.
 
