@@ -17,9 +17,14 @@ namespace CelestialCandle.Controllers
         // 
         // GET: /HelloWorld/
 
-        public string Index()   //Index () method 
+        /*public string Index()   //Index () method 
         {
             return "This is my default action...";
+        }*/
+
+        public IActionResult Index() //Index() method Uses a view template to generate an HTML response.
+        {
+            return View();
         }
 
         // 
@@ -32,9 +37,15 @@ namespace CelestialCandle.Controllers
 
         // GET: /HelloWorld/Welcome/ 
         // Requires using System.Text.Encodings.Web;
-        public string Welcome(string name, int numTimes = 1) //This is second update of the Welcome() where HtmlEncoder added for security, to protect the app from malicious input,
+
+        /* public string Welcome(string name, int numTimes = 1) //This is second update of the Welcome() where HtmlEncoder added for security, to protect the app from malicious input,
+         {
+             return HtmlEncoder.Default.Encode($"Hello {name}, NumTimes is: {numTimes}");
+         }*/
+
+        public string Welcome(string name, int ID = 1)     //Final version of Welcome () method
         {
-            return HtmlEncoder.Default.Encode($"Hello {name}, NumTimes is: {numTimes}");
+            return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
         }
     }
 }

@@ -19,7 +19,7 @@ An unhandled exception occurred while processing the request.
 InvalidOperationException: The view 'Index' was not found. The following locations were searched:
 /Views/Home/Index.cshtml
 /Views/Shared/Index.cshtml
-so change back to Index method
+so change back to Index method 
 
 At 13:10
 Add controller and update the Welcome and Index methods in the Controllers/HelloWorldController.cs file. 
@@ -28,5 +28,8 @@ Also add the HtmlEncoder.Default.Encode to protect the app from malicious input,
 Update the _layout.cshtml page with the following:
 Three update done of CelestialCandle to Celestial Candle
 The anchor element <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CelestialCandle</a> to
-<a class="navbar-brand" asp-controller="Home" asp-action="Index">Celestial Candle</a>.
+<a class="navbar-brand" asp-controller="Home" asp-action="Index">Celestial Candle</a>...
+
+At 13:20
+
 
