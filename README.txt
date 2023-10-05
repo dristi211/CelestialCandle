@@ -31,5 +31,5 @@ The anchor element <a class="navbar-brand" asp-area="" asp-controller="Home" asp
 <a class="navbar-brand" asp-controller="Home" asp-action="Index">Celestial Candle</a>...
 
 At 13:20
-
+created a loop in the Welcome.cshtml view template that displays "Hello" NumTimes by replacing the contents of Views/HelloWorld/Welcome.cshtml file
 

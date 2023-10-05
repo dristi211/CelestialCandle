@@ -43,9 +43,17 @@ namespace CelestialCandle.Controllers
              return HtmlEncoder.Default.Encode($"Hello {name}, NumTimes is: {numTimes}");
          }*/
 
-        public string Welcome(string name, int ID = 1)     //Final version of Welcome () method
+       /* public string Welcome(string name, int ID = 1)     // version of Welcome () method takes name and numTimes and show in the browser
         {
             return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
+        }*/
+
+        public IActionResult Welcome(string name, int numTimes = 1) //latest update to Welcome() method which gives a dynamic value of message and NumTimes
+        {
+            ViewData["Message"] = "Hello " + name;
+            ViewData["NumTimes"] = numTimes;
+
+            return View();
         }
     }
 }
