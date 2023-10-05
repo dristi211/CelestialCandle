@@ -59,3 +59,10 @@ Data type     Attribute Name
  String        Material         (Material that the Candle made with)
  decimal       Price            (Price of the Candle)
   
+  At 14:00
+ Add the NuGate Package Manager > Package Manager Console (PMC).
+instead of PMC we have to do-- Manage NuGate package for solution.....
+these will open the NuGet-Solution where we have to Browse
+Microsoft.EntityFrameworkCore.SqlServer and not the 7.1 version we have to select 3.1.0 version
+
+
