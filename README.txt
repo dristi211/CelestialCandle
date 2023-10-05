@@ -35,3 +35,27 @@ created a loop in the Welcome.cshtml view template that displays "Hello" NumTime
 
 At 13:40
 Created the View Welcome.cshtml file.Here the ViewData dictionary was used to pass data from the controller to a view.
+
+At 13:57
+Models folder > Add > Class. Name the file Candle.cs. created
+
+Update the Candle.cs file with the following code:
+using System;
+using System.ComponentModel.DataAnnotations;//This was not added first and showing an error that no DataAnnotation was added and then fixed with with the help of intellicence
+
+[DataType(DataType.DateTime)]
+[DisplayFormat(DataFormatString = "{yyyy-MM-dd:0}", ApplyFormatInEditMode = true)]// this format for ISO format
+
+The Attributes are the following:
+
+Data type     Attribute Name
+  Int          ID              (ID for Candle)
+ String        Name             (Name of the Candle)   
+ DateTime      ManufactureDate  (Date when the particuler candle manufactured)
+ String        Size             (size of the Candle)
+ String        Colour           (Colour of the Candle)
+ String        Fragrance        (Fragrance of the Candle)
+ String        MeltingPoint     (Melting point of the Candle)
+ String        Material         (Material that the Candle made with)
+ decimal       Price            (Price of the Candle)
+  
