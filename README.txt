@@ -33,3 +33,5 @@ The anchor element <a class="navbar-brand" asp-area="" asp-controller="Home" asp
 At 13:20
 created a loop in the Welcome.cshtml view template that displays "Hello" NumTimes by replacing the contents of Views/HelloWorld/Welcome.cshtml file
 
+At 13:40
+Created the View Welcome.cshtml file.Here the ViewData dictionary was used to pass data from the controller to a view.
