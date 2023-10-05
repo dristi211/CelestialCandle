@@ -65,4 +65,21 @@ instead of PMC we have to do-- Manage NuGate package for solution.....
 these will open the NuGet-Solution where we have to Browse
 Microsoft.EntityFrameworkCore.SqlServer and not the 7.1 version we have to select 3.1.0 version
 
+At 19:34
+opppps an error message appears while doing the scaffolding....
+ it says that the ConnectionString cannot be Null...so after spending some time and go back to the Startup -ConfigureService and found the error on the following line code ...I forgot to change the name MvcMovie :( to my project name
 
+ options.UseSqlServer(Configuration.GetConnectionString("CelestialCandleContext")));
+ hope it will work now!!
+ yes finally its working and created the CRUD pages
+Create a Data folder in the main project folder and add Context.cs file in it CelestialCandleContext
+
+update the code 
+Next step Register the database context with the following Using statement on the top of  the Startup.cs file
+using MvcMovie.Data;
+using Microsoft.EntityFrameworkCore;
+
+Although in the MS instruction only UseSqlServer is ask to add but we have to add AddDbContext also
+
+ services.AddDbContext<CelestialCandleContext>(options =>     
+ options.UseSqlServer(Configuration.GetConnectionString("CelestialCandleContext")));
