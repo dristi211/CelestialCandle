@@ -137,3 +137,12 @@ System.Text.StringBuilder.FormatError()
  Run the app....the logo is visible but too large to resize the logo image I have to add hight and width attribute...after the src attribute add the hight and width 
 
  <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Images/candle.png" height="150px" width="150px"/></a>
+In the wwwroot/css/site.css file added the following code to change the background colour of the pages and font...
+ body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: lightgreen;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+although the background colour change but the font style remain the same...need to figure out why...after coming from the classes...
