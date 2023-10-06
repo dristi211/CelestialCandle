@@ -7,6 +7,11 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: lightgreen;
+}
 /* Provide sufficient contrast against white background */
 a {
   color: blue;

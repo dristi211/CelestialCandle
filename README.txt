@@ -124,4 +124,16 @@ System.Text.StringBuilder.FormatError()
  in Index.cshtml
  @Html.DisplayFor(modelItem => item.ManufactureDate)
 
- As I tryed to change the format of the DateTime so it was giving an error
+ As I tryed to change the format of the DateTime so it was giving an error....fixed it...keep the original format
+
+ 2023-10-06 ISO 9:08
+
+ Start Working on the  project --first try to add a logo in the header section....
+ For that add an Images folder in the wwwroot folder and save a logo png image on the folder
+ next open the Views/Shared/_Layout.cshtml file and add the floowing info in the header nav section
+
+ <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Images/candle.png"/></a>
+
+ Run the app....the logo is visible but too large to resize the logo image I have to add hight and width attribute...after the src attribute add the hight and width 
+
+ <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Images/candle.png" height="150px" width="150px"/></a>
