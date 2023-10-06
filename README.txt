@@ -83,3 +83,17 @@ Although in the MS instruction only UseSqlServer is ask to add but we have to ad
 
  services.AddDbContext<CelestialCandleContext>(options =>     
  options.UseSqlServer(Configuration.GetConnectionString("CelestialCandleContext")));
+
+ At 19:52 the Migrations files created 
+ In the Package Manager Console (PMC), enter the following commands:
+
+Add-Migration InitialCreate
+Update-Database
+Which created the Migrations files and Update the database with the Update-Database command
+
+After the Update-Database commend the following warning came in the PMC 
+
+No type was specified for the decimal column 'Price' on entity type 'Candle'. 
+This will cause values to be silently truncated if they do not fit in the default precision and scale.
+Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+
