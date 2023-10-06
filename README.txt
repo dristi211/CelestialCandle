@@ -8,6 +8,9 @@ AT 12:30 ASP.NET Core 3.1 application is created for the assigned product using 
 
 Started creating the robust Mvc App for Assingment1. My product was assigned as CANDLE. I will create an unique Candle company product catalogue using  Web Application which will provide Radiance in my customers’ life.
 
+product investigation:
+
+
 At 12:48
 oh no why showing this build error message!! click the option OK to run the app with the last build and no update was showing.....then from the Error list saw the File name and line where the error was found and it is an extra curly braces } :)
 
@@ -97,3 +100,7 @@ No type was specified for the decimal column 'Price' on entity type 'Candle'.
 This will cause values to be silently truncated if they do not fit in the default precision and scale.
 Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
 
+At 22:45
+
+The SeedData class was created with ten(10) product items when seeding the database (Model > SeedData.cs).
+The database was created with 8 attributes and characteristics of the product Candle.
