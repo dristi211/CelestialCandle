@@ -104,3 +104,24 @@ At 22:45
 
 The SeedData class was created with ten(10) product items when seeding the database (Model > SeedData.cs).
 The database was created with 8 attributes and characteristics of the product Candle.
+
+The Program.cs file was updated with the using DependencyInjection statement 
+
+using Microsoft.Extensions.DependencyInjection;
+
+Also with the following Using statement
+
+using CelestialCandle.Data;
+using CelestialCandle.Models;
+
+At 23:40
+While running the app after seedData an error message came
+
+An unhandled exception occurred while processing the request.
+FormatException: Input string was not in a correct format.
+System.Text.StringBuilder.FormatError()
+
+ in Index.cshtml
+ @Html.DisplayFor(modelItem => item.ManufactureDate)
+
+ As I tryed to change the format of the DateTime so it was giving an error
