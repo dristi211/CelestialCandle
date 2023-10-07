@@ -19,4 +19,26 @@
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Font\OFL.txt" />
+    <None Include="wwwroot\Font\Poppins-Black.ttf" />
+    <None Include="wwwroot\Font\Poppins-BlackItalic.ttf" />
+    <None Include="wwwroot\Font\Poppins-Bold.ttf" />
+    <None Include="wwwroot\Font\Poppins-BoldItalic.ttf" />
+    <None Include="wwwroot\Font\Poppins-ExtraBold.ttf" />
+    <None Include="wwwroot\Font\Poppins-ExtraBoldItalic.ttf" />
+    <None Include="wwwroot\Font\Poppins-ExtraLight.ttf" />
+    <None Include="wwwroot\Font\Poppins-ExtraLightItalic.ttf" />
+    <None Include="wwwroot\Font\Poppins-Italic.ttf" />
+    <None Include="wwwroot\Font\Poppins-Light.ttf" />
+    <None Include="wwwroot\Font\Poppins-LightItalic.ttf" />
+    <None Include="wwwroot\Font\Poppins-Medium.ttf" />
+    <None Include="wwwroot\Font\Poppins-MediumItalic.ttf" />
+    <None Include="wwwroot\Font\Poppins-Regular.ttf" />
+    <None Include="wwwroot\Font\Poppins-SemiBold.ttf" />
+    <None Include="wwwroot\Font\Poppins-SemiBoldItalic.ttf" />
+    <None Include="wwwroot\Font\Poppins-Thin.ttf" />
+    <None Include="wwwroot\Font\Poppins-ThinItalic.ttf" />
+  </ItemGroup>
+
 </Project>

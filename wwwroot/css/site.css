@@ -1,6 +1,16 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+@font-face{
+    font-family:'Poppins-Regular';
+    src: url('../Font/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../Font/Poppins-Bold.ttf') format('truetype');
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -11,9 +21,14 @@ body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
     background-color: lightgreen;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+h1,h2{
+    font-family: 'Poppins-Bold';
+}
 /* Provide sufficient contrast against white background */
 a {
   color: blue;

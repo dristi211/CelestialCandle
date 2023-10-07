@@ -17,6 +17,7 @@ oh no why showing this build error message!! click the option OK to run the app 
 In the HelloWorldController.cs lets try to change the name of the action method ---public IActionResult Index()method name to Radiance() and check if it works
 
 At 13:06
+
 while trying to change the name of the Index methods name:
 An unhandled exception occurred while processing the request.
 InvalidOperationException: The view 'Index' was not found. The following locations were searched:
@@ -25,6 +26,7 @@ InvalidOperationException: The view 'Index' was not found. The following locatio
 so change back to Index method 
 
 At 13:10
+
 Add controller and update the Welcome and Index methods in the Controllers/HelloWorldController.cs file. 
 Also add the HtmlEncoder.Default.Encode to protect the app from malicious input,
 
@@ -34,12 +36,15 @@ The anchor element <a class="navbar-brand" asp-area="" asp-controller="Home" asp
 <a class="navbar-brand" asp-controller="Home" asp-action="Index">Celestial Candle</a>...
 
 At 13:20
+
 created a loop in the Welcome.cshtml view template that displays "Hello" NumTimes by replacing the contents of Views/HelloWorld/Welcome.cshtml file
 
 At 13:40
+
 Created the View Welcome.cshtml file.Here the ViewData dictionary was used to pass data from the controller to a view.
 
 At 13:57
+
 Models folder > Add > Class. Name the file Candle.cs. created
 
 Update the Candle.cs file with the following code:
@@ -63,12 +68,14 @@ Data type     Attribute Name
  decimal       Price            (Price of the Candle)
   
   At 14:00
+
  Add the NuGate Package Manager > Package Manager Console (PMC).
 instead of PMC we have to do-- Manage NuGate package for solution.....
 these will open the NuGet-Solution where we have to Browse
 Microsoft.EntityFrameworkCore.SqlServer and not the 7.1 version we have to select 3.1.0 version
 
 At 19:34
+
 opppps an error message appears while doing the scaffolding....
  it says that the ConnectionString cannot be Null...so after spending some time and go back to the Startup -ConfigureService and found the error on the following line code ...I forgot to change the name MvcMovie :( to my project name
 
@@ -87,7 +94,9 @@ Although in the MS instruction only UseSqlServer is ask to add but we have to ad
  services.AddDbContext<CelestialCandleContext>(options =>     
  options.UseSqlServer(Configuration.GetConnectionString("CelestialCandleContext")));
 
- At 19:52 the Migrations files created 
+ At 19:52 
+ 
+ the Migrations files created 
  In the Package Manager Console (PMC), enter the following commands:
 
 Add-Migration InitialCreate
@@ -115,6 +124,7 @@ using CelestialCandle.Data;
 using CelestialCandle.Models;
 
 At 23:40
+
 While running the app after seedData an error message came
 
 An unhandled exception occurred while processing the request.
@@ -128,7 +138,7 @@ System.Text.StringBuilder.FormatError()
 
  2023-10-06 ISO 9:08
 
- Start Working on the  project --first try to add a logo in the header section....
+ Resume Working on the  project --first try to add a logo in the header section....
  For that add an Images folder in the wwwroot folder and save a logo png image on the folder
  next open the Views/Shared/_Layout.cshtml file and add the floowing info in the header nav section
 
@@ -146,3 +156,18 @@ In the wwwroot/css/site.css file added the following code to change the backgrou
 }
 
 although the background colour change but the font style remain the same...need to figure out why...after coming from the classes...
+
+2023-10-07 ISO  18:32
+Resume working on the project...
+Added a Font folder in the wwwroot and download the google Poppins font family in the folder.
+In the site.css added the following code
+@font-face{
+    font-family:'Poppins-Regular';
+    src: url('../Font/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../Font/Poppins-Bold.ttf') format('truetype');
+}
+Now I can use the Poppins font family in my header and other font...
