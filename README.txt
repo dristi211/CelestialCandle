@@ -177,3 +177,13 @@ At 23:25
 Added some bootstrap style in the _Layout page and also in the site.css
 Change the nav bar colour...manage to change the font colour, background colour...
 need to figure out how to change the padding and size of the font
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.display-4{
+    font-family:'Poppins-Regular','Times New Roman', Times, serif;
+    font-size:x-large;
+    padding-block:auto;
+}
