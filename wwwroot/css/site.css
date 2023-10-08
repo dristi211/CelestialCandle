@@ -13,27 +13,41 @@ for details on configuring this project to bundle and minify static web assets. 
 
 a.navbar-brand {
   white-space: normal;
-  text-align: center;
+  text-align: left;
   word-break: break-all;
 }
 
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    background-color: lightgreen;
+    background-color: snow;
 }
 p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-h1,h2{
-    font-family: 'Poppins-Bold';
+.display-4{
+    font-family:'Poppins-Regular','Times New Roman', Times, serif;
+    font-size:x-large;
+    padding-block:auto;
+}
+.navbar-brand{
+    font-family: 'Poppins-Regular','Times New Roman', Times, serif;
+    font-size: small;
+}
+
+.nav-item{
+    font-display:block;
+    font-family:'Poppins-Bold','Times New Roman', Times, serif;
+    font-size:medium;
 }
 /* Provide sufficient contrast against white background */
 a {
-  color: blue;
-}
+    color: blue;
+    background-image:src('../Images/candles.jpg');
 
+}
+ 
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
