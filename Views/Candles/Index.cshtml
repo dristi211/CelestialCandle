@@ -1,14 +1,20 @@
 ﻿@model IEnumerable<CelestialCandle.Models.Candle>
 
 @{
-    ViewData["Title"] = "Radiance";
+    ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h2>Radiance We Bring!</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<form asp-controller="Candles" asp-action="Index">
+    <p>
+        Title: <input type="text" name="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -70,6 +76,7 @@
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                
             </td>
         </tr>
 }
