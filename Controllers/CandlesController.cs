@@ -21,35 +21,19 @@ namespace CelestialCandle.Controllers
 
         // GET: Candles
         // GET: Movies
-        public async Task<IActionResult> Index(string candleMaterial, string searchString)
+        // public async Task<IActionResult> Index(string id)  //update the index() method with Id parameter
+        public async Task<IActionResult> Index(string searchString)      //change it back so that it takes a parameter named searchString
         {
-            // Use LINQ to get list of genres.
-            IQueryable<string> genreQuery = from m in _context.Candle
-                                            orderby m.Material
-                                            select m.Material;
+    var candles = from m in _context.Candle     //The first line of the Index action method creates a LINQ query to select the candles
+                  select m;
 
-            var movies = from m in _context.Candle
-                         select m;
+    if (!String.IsNullOrEmpty(searchString))
+    {
+        candles = candles.Where(s => s.Name.Contains(searchString )); //this is the Lambda expression
+    }
 
-            if (!string.IsNullOrEmpty(searchString)) //adding search string if there is Null or empty fild
-            {
-                movies = movies.Where(s => s.Name.Contains(searchString));
-            }
-
-            if (!string.IsNullOrEmpty(candleMaterial))
-            {
-                movies = movies.Where(x => x.Material == candleMaterial);
-            }
-
-            var candleMaterialVM = new CandleMaterialViewModel
-            {
-                Materials = new SelectList(await genreQuery.Distinct().ToListAsync()),
-                Candles = await movies.ToListAsync()
-            };
-
-            return View(candleMaterialVM);
-        }
-
+    return View(await candles.ToListAsync());
+}
         // GET: Candles/Details/5
         public async Task<IActionResult> Details(int? id)
         {

@@ -198,3 +198,80 @@ The [Column(TypeName = "decimal(18, 2)")] data annotation is required so Entity 
 
 oppps....forgot to change the field name for "Meltiing Point":)
 fixed it...
+
+InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'CelestialCandle.Controllers.CandleMaterialViewModel', but this ViewDataDictionary instance requires a model item of type 'System.Collections.Generic.IEnumerable`1[CelestialCandle.Models.Candle]'.
+
+<form asp-controller="Movies" asp-action="Index" method="get">  the get method forgot to add....lets see if its working...
+
+using System;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace MvcMovie.Models
+{
+    public class MovieGenreViewModel
+    {
+        public List<Movie> Movies { get; set; }
+        public SelectList Genres { get; set; }
+        public string MovieGenre { get; set; }
+        public string SearchString { get; set; }
+    }
+}
+namespace CelestialCandle.Models
+{
+    public class CandleMaterialModel
+    {
+        public List<Candle> Candles { get; set; }
+        public SelectList Materials { get; set; }
+        public string CandleMaterial { get; set; }
+        public string SearchString { get; set; }
+    }
+}
+
+the Index()method in CandleController.cs updateed with the following code
+
+      // GET: Candles
+        // GET: Movies
+      public async Task<IActionResult> Index(string searchString)
+{
+    var candles = from m in _context.Candle
+                 select m;
+
+    if (!String.IsNullOrEmpty(searchString))
+    {
+        candles = candles.Where(s => s.Name.Contains(searchString));
+    }
+
+    return View(await candles.ToListAsync());
+}
+
+  public async Task<IActionResult> Index(string candleMaterial, string searchString)
+        {
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Candle
+                                            orderby m.Material
+                                            select m.Material;
+
+            var movies = from m in _context.Candle
+                         select m;
+
+            if (!string.IsNullOrEmpty(searchString)) //adding search string if there is Null or empty fild
+            {
+                movies = movies.Where(s => s.Name.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(candleMaterial))
+            {
+                movies = movies.Where(x => x.Material == candleMaterial);
+            }
+
+            var candleMaterialVM = new CandleMaterialViewModel
+            {
+                Materials = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Candles = await movies.ToListAsync()
+            };
+
+            return View(candleMaterialVM);
+        }
