@@ -1,14 +1,14 @@
 ﻿Project name: CelestialCandle
 Purpose: Create an unique Candle company’s app using Dot.Net Mvc App (for WEB452 Assingment1)
 Author: Dristi Khondkar
-Date: 2023-10-05 ISO  12:20
+Date: 2023-10-05 ISO 8601 12:20
 
-AT 12:30 ASP.NET Core 3.1 application is created for the assigned product using Visual Studio 2019
+AT 12:30 ASP.NET Core 3.1 application is created for the assigned CANDLE (product) using Visual Studio 2019
 
 
 Started creating the robust Mvc App for Assingment1. My product was assigned as CANDLE. I will create an unique Candle company product catalogue using  Web Application which will provide Radiance in my customers’ life.
 
-product investigation:
+Product Investigation:
 
 
 At 12:48
@@ -187,3 +187,14 @@ p{
     font-size:x-large;
     padding-block:auto;
 }
+
+2023-10-11 ISO 12:56
+
+Resume working on the Celestial Candle project
+
+I have updated the Display attribute that specifies what to display for the name of a field (in my case "Manufacture Date" instead of "ManufactureDate" and "Melting Point" insted of "MeltingPoint"). The DataType attribute specifies the type of the data (Date), so the time information stored in the field isn't displayed.
+
+The [Column(TypeName = "decimal(18, 2)")] data annotation is required so Entity Framework Core can correctly map Price to currency in the database. 
+
+oppps....forgot to change the field name for "Meltiing Point":)
+fixed it...
