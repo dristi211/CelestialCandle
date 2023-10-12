@@ -18,7 +18,11 @@ namespace CelestialCandle.Controllers
         {
             _context = context;
         }
-
+        [HttpPost]
+        public string Index(string searchString, bool notUsed)
+        {
+            return "From [HttpPost]Index: filter on " + searchString;
+        }
         // GET: Candles
         // GET: Movies
         // public async Task<IActionResult> Index(string id)  //update the index() method with Id parameter
