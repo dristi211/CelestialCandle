@@ -277,3 +277,11 @@ the Index()method in CandleController.cs updateed with the following code
         }
         At 16:34 
         Lambda expression added and chage the code for Candle Size
+
+        OMG after working and find out the probles like 4hours finally it working as the  size 
+
+        Now will work on Add a Rating property to Models/Candle.cs
+       at 17:05
+       Added the Rating property in the browser view.
+
+      Edit the /Views/Movies/Index.cshtml file and add a Rating field

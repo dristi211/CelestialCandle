@@ -99,7 +99,7 @@ namespace CelestialCandle.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,ManufactureDate,Size,Colour,Fragrance,MeltingPoint,Material,Price")] Candle candle)
+        public async Task<IActionResult> Create([Bind("Id,Name,ManufactureDate,Size,Colour,Fragrance,MeltingPoint,Material,Price,Rating")] Candle candle)
         {
             if (ModelState.IsValid)
             {
@@ -131,7 +131,7 @@ namespace CelestialCandle.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ManufactureDate,Size,Colour,Fragrance,MeltingPoint,Material,Price")] Candle candle)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ManufactureDate,Size,Colour,Fragrance,MeltingPoint,Material,Price,Rating")] Candle candle)
         {
             if (id != candle.Id)
             {
