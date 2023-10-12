@@ -26,7 +26,7 @@ namespace CelestialCandle.Controllers
         // GET: Candles
         // GET: Movies
         // public async Task<IActionResult> Index(string id)  //update the index() method with Id parameter
-        public async Task<IActionResult> Index(string searchString)      //change it back so that it takes a parameter named searchString
+        /*public async Task<IActionResult> Index(string searchString)      //change it back so that it takes a parameter named searchString
         {
     var candles = from m in _context.Candle     //The first line of the Index action method creates a LINQ query to select the candles
                   select m;
@@ -37,7 +37,39 @@ namespace CelestialCandle.Controllers
     }
 
     return View(await candles.ToListAsync());
-}
+}*/
+
+        // GET: Movies
+        public async Task<IActionResult> Index(string candleSize, string searchString) //index method for adding size of the candle
+        {
+            // Use LINQ to get list of genres.
+            IQueryable<string> sizeQuery = from m in _context.Candle
+                                            orderby m.Size
+                                            select m.Size;
+
+            var candles = from m in _context.Candle
+                         select m;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                candles = candles.Where(s => s.Name.Contains(searchString));  //very critical to changes all variables and properties
+            }
+
+            if (!string.IsNullOrEmpty(candleSize))
+            {
+                candles = candles.Where(x => x.Size == candleSize);
+            }
+
+            var candleSizeVM = new CandleSizeViewModel
+            {
+                Sizes = new SelectList(await sizeQuery.Distinct().ToListAsync()),
+                Candles = await candles.ToListAsync()
+            };
+
+            return View(candleSizeVM);
+        }
+
+
         // GET: Candles/Details/5
         public async Task<IActionResult> Details(int? id)
         {

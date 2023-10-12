@@ -275,3 +275,5 @@ the Index()method in CandleController.cs updateed with the following code
 
             return View(candleMaterialVM);
         }
+        At 16:34 
+        Lambda expression added and chage the code for Candle Size

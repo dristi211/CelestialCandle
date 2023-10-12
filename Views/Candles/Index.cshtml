@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CelestialCandle.Models.Candle>
+﻿@model CelestialCandle.Models.CandleSizeViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -9,8 +9,11 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<form asp-controller="Candles" asp-action="Index" method="get" >   
+<form asp-controller="Candles" asp-action="Index" method="get">
     <p>
+        <select asp-for="CandleSize" asp-items="Model.Sizes">
+            <option value="">All</option>
+        </select>
         Title: <input type="text" name="SearchString" />
         <input type="submit" value="Filter" />
     </p>
@@ -19,66 +22,67 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.Candles[0].Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ManufactureDate)
+                @Html.DisplayNameFor(model => model.Candles[0].ManufactureDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Size)
+                @Html.DisplayNameFor(model => model.Candles[0].Size)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Colour)
+                @Html.DisplayNameFor(model => model.Candles[0].Colour)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Fragrance)
+                @Html.DisplayNameFor(model => model.Candles[0].Fragrance)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MeltingPoint)
+                @Html.DisplayNameFor(model => model.Candles[0].MeltingPoint)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Material)
+                @Html.DisplayNameFor(model => model.Candles[0].Material)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Candles[0].Price)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ManufactureDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Size)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Colour)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fragrance)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MeltingPoint)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Material)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Candles)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ManufactureDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Size)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Colour)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fragrance)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MeltingPoint)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Material)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
