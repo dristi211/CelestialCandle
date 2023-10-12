@@ -285,3 +285,6 @@ the Index()method in CandleController.cs updateed with the following code
        Added the Rating property in the browser view.
 
       Edit the /Views/Movies/Index.cshtml file and add a Rating field
+
+      At 17:45
+      Added  public ActionResult AboutUs() method to the HomeController.cs file

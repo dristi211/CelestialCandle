@@ -28,6 +28,11 @@ namespace CelestialCandle.Controllers
             return View();
         }
 
+        public ActionResult AboutUs()  //this method is for AboutUs page
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
