@@ -11,7 +11,7 @@ namespace CelestialCandle.Models
     {
         public int Id { get; set; }
 
-        [StringLength(60, MinimumLength = 3)]
+        [StringLength(60, MinimumLength = 3)]   //menimum length 3 and maximum 60
         [Required]
         public string Name { get; set; }
 
@@ -30,10 +30,11 @@ namespace CelestialCandle.Models
         public string Colour { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
+        [StringLength(10)]                            //here string length reuired at least 10 
         [Required]
         public string Fragrance { get; set; }
 
-        [Display(Name = "Melting Point")]
+        [Display(Name = "Melting Point")]       //this will required and string length sould be at least 3
         [StringLength(3)]
         [Required]
         public string MeltingPoint { get; set; }
@@ -42,7 +43,7 @@ namespace CelestialCandle.Models
         [Required]
         public string Material { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")] //reguler expression will keep it within thr range
         [StringLength(5)]
         [Required]
         public string Rating { get; set; }

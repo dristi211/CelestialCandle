@@ -8,9 +8,9 @@ namespace CelestialCandle.Models
 {
     public class CandleSizeViewModel
     {
-        public List<Candle> Candles { get; set; }
+        public List<Candle> Candles { get; set; }  //created the property size as a search criteria
         public SelectList Sizes { get; set; }
-        public string CandleSize { get; set; }
+        public string CandleSize { get; set; }  //before tried to use Material...wont work for some reasone
         public string SearchString { get; set; }
     }
 }

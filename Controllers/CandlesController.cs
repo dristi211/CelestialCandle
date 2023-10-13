@@ -69,18 +69,6 @@ namespace CelestialCandle.Controllers
             return View(candleSizeVM);
         }
 
-       /* public class ProductsController : Controller
-        {
-            public ActionResult AllProducts()
-            {
-                using (var db = new CelestialCandleContext())
-                {
-                    var products = db.Candle.ToList();
-                    return View(products);
-                }
-            }
-        }*/
-
 
 
 
