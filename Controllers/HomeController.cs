@@ -28,7 +28,11 @@ namespace CelestialCandle.Controllers
             return View();
         }
 
-        public ActionResult AboutUs()  //this method is for AboutUs page
+        public IActionResult Candles()  //this method for the Candle catalogue page
+        {
+            return View();
+        }
+        public ActionResult AboutUs()  //this method is for AboutUs page link
         {
             return View();
         }

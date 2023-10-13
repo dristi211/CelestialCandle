@@ -299,3 +299,9 @@ the Index()method in CandleController.cs updateed with the following code
       added the Images folder in the CSS folder and dropping down the images in the About Us, Index and Privacy page
       <img src="~/css/Images/candle1.jpg" width="150px" hight="150px" />
       add the @DateTime.Now.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss") attrubutes in the footer...wow I am a geneous:)
+
+      20-10-13 ISO 9:22
+
+      create a direct ling with the database...
+      Added Product folder in the Views and add a All Products,cshtml file
+      Now will create MD file in Github
