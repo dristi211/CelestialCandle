@@ -288,3 +288,5 @@ the Index()method in CandleController.cs updateed with the following code
 
       At 17:45
       Added  public ActionResult AboutUs() method to the HomeController.cs file
+
+      SqlNullValueException: Data is Null. This method or property cannot be called on Null values

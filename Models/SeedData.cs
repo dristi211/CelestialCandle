@@ -34,7 +34,7 @@ namespace CelestialCandle.Models
                         Fragrance = "Mild",
                         MeltingPoint = "37C",
                         Material = "Natural Wax",
-                        Rating = "R",
+                        Rating = "Good",
                         Price = 7.99M
                     },
 
@@ -47,7 +47,7 @@ namespace CelestialCandle.Models
                         Fragrance = "Strong",
                         MeltingPoint = "62C",
                         Material = "BeesWax",
-                        Rating = "R",
+                        Rating = "Excellent",
                         Price = 9.99M
                     },
 
@@ -60,7 +60,7 @@ namespace CelestialCandle.Models
                         Fragrance = "Strong",
                         MeltingPoint = "37C",
                         Material = "Patrolium Wax",
-                        Rating = "R",
+                        Rating = "Best",
                         Price = 7.99M
                     },
 
@@ -73,7 +73,7 @@ namespace CelestialCandle.Models
                         Fragrance = "Mild",
                         MeltingPoint = "64C",
                         Material = "BeesWax",
-                        Rating = "R",
+                        Rating = "Best",
                         Price = 9.99M
                     },
                       new Candle
@@ -85,7 +85,7 @@ namespace CelestialCandle.Models
                           Fragrance = "Strong",
                           MeltingPoint = "62C",
                           Material = "BeesWax",
-                          Rating = "R",
+                          Rating = "Good",
                           Price = 12.99M
                       },
 
@@ -98,7 +98,7 @@ namespace CelestialCandle.Models
                           Fragrance = "Strong",
                           MeltingPoint = "64C",
                           Material = "BeesWax",
-                          Rating = "R",
+                          Rating = "Good",
                           Price = 15.99M
                       },
                       new Candle
@@ -110,7 +110,7 @@ namespace CelestialCandle.Models
                           Fragrance = "Mild",
                           MeltingPoint = "37C",
                           Material = "Petrolium Wax",
-                          Rating = "R",
+                          Rating = "Poor",
                           Price = 15.99M
                       },
                       new Candle
@@ -122,7 +122,7 @@ namespace CelestialCandle.Models
                           Fragrance = "Mild",
                           MeltingPoint = "37C",
                           Material = "Petrolium Wax",
-                          Rating = "R",
+                          Rating = "Best",
                           Price = 19.99M
                       },
                       new Candle
@@ -134,7 +134,7 @@ namespace CelestialCandle.Models
                           Fragrance = "Mild",
                           MeltingPoint = "62C",
                           Material = "BeesWax",
-                          Rating = "R",
+                          Rating = "Good",
                           Price = 15.99M
                       },
                       new Candle
@@ -146,7 +146,7 @@ namespace CelestialCandle.Models
                           Fragrance = "Strong",
                           MeltingPoint = "62C",
                           Material = "BeesWax",
-                          Rating = "R",
+                          Rating = "Good",
                           Price = 15.99M
                       }
                 );
