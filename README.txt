@@ -307,3 +307,6 @@ the Index()method in CandleController.cs updateed with the following code
       Now  created the  MD file in Github
     At 11:00
     Css style for the Index page added and also fixed the Catalogue link 
+
+    Finally manage to finished the Project....hope it is a success...
+    Next step to deploy the Project and published it in the Azure (cloud computing platform run by Microsoft)

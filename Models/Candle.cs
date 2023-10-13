@@ -34,6 +34,8 @@ namespace CelestialCandle.Models
         public string Fragrance { get; set; }
 
         [Display(Name = "Melting Point")]
+        [StringLength(3)]
+        [Required]
         public string MeltingPoint { get; set; }
 
         [StringLength(60, MinimumLength = 3)]
