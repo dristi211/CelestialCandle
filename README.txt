@@ -304,4 +304,6 @@ the Index()method in CandleController.cs updateed with the following code
 
       create a direct ling with the database...
       Added Product folder in the Views and add a All Products,cshtml file
-      Now will create MD file in Github
+      Now  created the  MD file in Github
+    At 11:00
+    Css style for the Index page added and also fixed the Catalogue link 

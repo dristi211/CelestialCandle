@@ -2,13 +2,15 @@
     ViewData["Title"] = "Home Page";
 }
 
-@Html.ActionLink("View All Products", "AllProducts", "Products")
+
 
 <div class="text-center text-success">
     <h1 class="display-4">
-        <img src="~/css/Images/background.jpg" />
     </h1>
     <h2><i>We Bring Light in Your Life!</i> </h2>
-    <p>Founded in 2020, Celestial Candle Co. is an artisanal candle company that crafts not just candles, but sensory experiences. Drawing inspiration from nature, literature, and the intangible, each candle represents a story waiting to be unveiled. Located in the heart of Windsor, ON, the company thrives on a blend of traditional craftsmanship and innovative techniques to ensure every product is a work of art..</p>
+    <a class="navbar-brand" asp-controller="Candles" asp-action="Index">Product catalogue</a><br />
+    <img src="~/css/Images/background.jpg"/><br />
+    <br />
+    <p class="text-black">Founded in 2020, Celestial Candle Co. is an artisanal candle company that crafts not just candles, but sensory experiences. Drawing inspiration from nature, literature, and the intangible, each candle represents a story waiting to be unveiled. Located in the heart of Windsor, ON, the company thrives on a blend of traditional craftsmanship and innovative techniques to ensure every product is a work of art..</p>
     <p><a href="https://en.wikipedia.org/wiki/Candle">Learn More about Candle</a></p>
 </div>
