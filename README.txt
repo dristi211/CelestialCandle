@@ -9,7 +9,7 @@ AT 12:30 ASP.NET Core 3.1 application is created for the assigned CANDLE (produc
 Started creating the robust Mvc App for Assingment1. My product was assigned as CANDLE. I will create an unique Candle company product catalogue using  Web Application which will provide Radiance in my customers’ life.
 
 Product Investigation:
-
+Investigation was done on different types of Candles, their properties, making, material, physical properties as well as chemical properties.
 
 At 12:48
 oh no why showing this build error message!! click the option OK to run the app with the last build and no update was showing.....then from the Error list saw the File name and line where the error was found and it is an extra curly braces } :)
@@ -209,16 +209,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MvcMovie.Models
-{
-    public class MovieGenreViewModel
-    {
-        public List<Movie> Movies { get; set; }
-        public SelectList Genres { get; set; }
-        public string MovieGenre { get; set; }
-        public string SearchString { get; set; }
-    }
-}
+
 namespace CelestialCandle.Models
 {
     public class CandleMaterialModel
@@ -270,15 +261,26 @@ the Index()method in CandleController.cs updateed with the following code
             var candleMaterialVM = new CandleMaterialViewModel
             {
                 Materials = new SelectList(await genreQuery.Distinct().ToListAsync()),
-                Candles = await movies.ToListAsync()
+                Candles = await candles.ToListAsync()
             };
 
             return View(candleMaterialVM);
         }
-        At 16:34 
+  2023-10-12      At 16:34 
+
         Lambda expression added and chage the code for Candle Size
 
-        OMG after working and find out the probles like 4hours finally it working as the  size 
+        OMG after working for 4h change the class name to Size and redo all the process..... 
+        namespace CelestialCandle.Models
+{
+    public class CandleMaterialModel
+    {
+        public List<Candle> Candles { get; set; }
+        public SelectList Size { get; set; }
+        public string CandleSize { get; set; }
+        public string SearchString { get; set; }
+    }
+}
 
         Now will work on Add a Rating property to Models/Candle.cs
        at 17:05
@@ -287,6 +289,13 @@ the Index()method in CandleController.cs updateed with the following code
       Edit the /Views/Movies/Index.cshtml file and add a Rating field
 
       At 17:45
-      Added  public ActionResult AboutUs() method to the HomeController.cs file
+      Added  public ActionResult AboutUs() method to the HomeController.cs file for the About Us page and updated the CURD files accodingly
 
-      SqlNullValueException: Data is Null. This method or property cannot be called on Null values
+      SqlNullValueException: Data is Null. This method or property cannot be called on Null values 
+      solved the error by update the Data table from the view --SSOX
+
+      At 22:30
+      Trying to modify the pages with CSS styling and images
+      added the Images folder in the CSS folder and dropping down the images in the About Us, Index and Privacy page
+      <img src="~/css/Images/candle1.jpg" width="150px" hight="150px" />
+      add the @DateTime.Now.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss") attrubutes in the footer...wow I am a geneous:)

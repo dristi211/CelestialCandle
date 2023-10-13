@@ -16,22 +16,27 @@ a.navbar-brand {
   text-align: left;
   word-break: break-all;
 }
-
+div{
+    background-color:aqua;
+}
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    background-color:beige;
-    background-image: src('Images/background.jpg');
+    background-color: beige;
+    background-image: url('file:///C:\Users\drist\Desktop\Candle\wwwroot\css\Images\background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-
-p{
+.text-center text-success{
+    padding:20px;
+    opacity:initial;
+}
+p {
     font-family: 'Poppins-Regular', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size:medium;
-    padding:initial;
+    font-size: medium;
+    padding: initial;
 }
 
 .display-4{
@@ -103,8 +108,9 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-image: url('file:///C:\Users\drist\Desktop\Candle\wwwroot\css\Images\can2.jpg');
 }
 .footer {
   position: absolute;
